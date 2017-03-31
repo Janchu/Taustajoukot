@@ -2,14 +2,33 @@ import React, { Component } from 'react';
 import Header from './modules/Header';
 import Footer from './modules/Footer';
 import Home from './modules/Home';
-import './App.css';
+import '../public/App.css';
+
+
+const styles = {
+  wrapper: {
+    minHeight: '100%',
+    marginTop: 0,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginBottom: -140,
+    maxWidth: 1080,
+  },
+  pull: {
+    height: 80
+  }
+}
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Home />
+        <div style={styles.wrapper}>
+          <Header />
+          <Home />
+          <div style={styles.pull}></div>
+        </div>
         <Footer />
       </div>
     );
