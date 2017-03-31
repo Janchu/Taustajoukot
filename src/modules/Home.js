@@ -6,12 +6,17 @@ import Paku from '../../public/img/paku1_2.png';
 import Ukko from '../../public/img/ukko1_3.png';
 import BusinessCard from '../components/BusinessCard';
 import PartnerLogo from '../components/PartnerLogo';
+import Divider from '../components/Divider';
 import contactInformation from '../utils/contactInformation';
 
 
 const styles = {
   section: {
     padding: 20,
+  },
+  article: {
+    maxWidth: 1080,
+    margin: 'auto',
   },
   h1: {
     fontSize: 20,
@@ -42,7 +47,7 @@ const styles = {
 class Home extends Component {
   render() {
     return(
-      <article>
+      <article style={styles.article}>
         <section style={styles.section}>
           <h1 style={styles.h1}>TALOTEHTAIDEN KUMPPANI LOGISTIIKASSA, RAKENNUSMATERIAALIEN KÄSITTELYSSÄ,
             TYÖMAIDEN TURVALLISUUDESSA JA SIISTEYDESSÄ</h1>
@@ -50,7 +55,7 @@ class Home extends Component {
           <img style={styles.ukko} src={Ukko} alt='Taustajoukot'/>
         </section>
 
-        <hr width='95%'/>
+        <Divider />
 
         <section>
           <h1 style={styles.h1}>YHTEYSTIEDOT</h1>
@@ -73,13 +78,10 @@ class Home extends Component {
               phone={contactInformation.person2.phone}
               email={contactInformation.person2.email}
             />
-
-
           </div>
-
         </section>
 
-        <hr width='95%'/>
+        <Divider />
 
         <section>
           <h1 style={styles.h1}>YHTEISTYÖKUMPPANIMME</h1>
