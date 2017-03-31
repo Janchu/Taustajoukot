@@ -5,12 +5,16 @@ import Sievitalologo from '../../public/img/Sievitalologo.png';
 import Paku from '../../public/img/paku1_2.png';
 import Ukko from '../../public/img/ukko1_3.png';
 import BusinessCard from '../components/BusinessCard';
+import PartnerLogo from '../components/PartnerLogo';
 import contactInformation from '../utils/contactInformation';
 
 
 const styles = {
+  section: {
+    padding: 20,
+  },
   h1: {
-    fontSize: 18,
+    fontSize: 20,
     fontFamily: 'Open Sans',
     fontWeight: 'normal',
     color: '#EA6611'
@@ -39,7 +43,7 @@ class Home extends Component {
   render() {
     return(
       <article>
-        <section>
+        <section style={styles.section}>
           <h1 style={styles.h1}>TALOTEHTAIDEN KUMPPANI LOGISTIIKASSA, RAKENNUSMATERIAALIEN KÄSITTELYSSÄ,
             TYÖMAIDEN TURVALLISUUDESSA JA SIISTEYDESSÄ</h1>
           <img style={styles.paku} src={Paku} alt='Taustajoukot'/>
@@ -80,9 +84,9 @@ class Home extends Component {
         <section>
           <h1 style={styles.h1}>YHTEISTYÖKUMPPANIMME</h1>
             <div style={styles.flex}>
-              <img style={styles.flexItem} src={Kastellilogo} alt='Kastelli'/>
-              <img style={styles.flexItem} src={Sievitalologo} alt='Sievetalo'/>
-              <img style={styles.flexItem} src={Omatalologo} alt='Omatalo'/>
+              <PartnerLogo src={Kastellilogo} alt='Kastelli'/>
+              <PartnerLogo src={Sievitalologo} alt='Sievetalo'/>
+              <PartnerLogo src={Omatalologo} alt='Omatalo'/>
             </div>
         </section>
       </article>
