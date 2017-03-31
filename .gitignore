@@ -17,4 +17,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # emails, addresses and phone numbers
-contactInformation.js
+/src/utils/contactInformation.js

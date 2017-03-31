@@ -4,7 +4,9 @@ import Omatalologo from '../../public/img/Omatalologo.png';
 import Sievitalologo from '../../public/img/Sievitalologo.png';
 import Paku from '../../public/img/paku1_2.png';
 import Ukko from '../../public/img/ukko1_3.png';
-import contactInformation from '../../contactInformation';
+import BusinessCard from '../components/BusinessCard';
+import contactInformation from '../utils/contactInformation';
+
 
 const styles = {
   h1: {
@@ -13,31 +15,23 @@ const styles = {
     fontWeight: 'normal',
     color: '#EA6611'
   },
-  h5: {
-    fontFamily: 'Open Sans',
-  },
-  p: {
-    fontFamily: 'Open Sans',
-    fontSize: 14,
-  },
   flex: {
     display: 'flex',
     flexFlow: 'row wrap',
     justifyContent: 'space-around',
     alignItems: 'center',
   },
-  flexItem: {
-    margin: 20,
-  },
   paku: {
     width: '50%',
     maxWidth: 400,
     height: 'auto',
+    margin: 20,
   },
   ukko: {
     width: '15%',
     maxWidth: 120,
     height: 'auto',
+    margin: 20,
   }
 }
 
@@ -57,24 +51,26 @@ class Home extends Component {
         <section>
           <h1 style={styles.h1}>YHTEYSTIEDOT</h1>
           <div style={styles.flex}>
-            <div style={styles.flexItem}>
-              <h5 style={styles.h5}>{contactInformation.office.role}</h5>
-              <p style={styles.p}>{contactInformation.office.address}<br/>
-                {contactInformation.office.phone}<br/>
-                {contactInformation.office.email}</p>
-            </div>
-            <div style={styles.flexItem}>
-              <h5 style={styles.h5}>{contactInformation.person1.role}</h5>
-              <p style={styles.p}>{contactInformation.person1.name}<br/>
-                {contactInformation.person1.phone}<br/>
-                {contactInformation.person1.email}</p>
-            </div>
-            <div style={styles.flexItem}>
-              <h5 style={styles.h5}>{contactInformation.person2.role}</h5>
-              <p style={styles.p}>{contactInformation.person2.name}<br/>
-                {contactInformation.person2.phone}<br/>
-                {contactInformation.person2.email}</p>
-            </div>
+            <BusinessCard
+              position={contactInformation.office.position}
+              address={contactInformation.office.address}
+              phone={contactInformation.office.phone}
+              email={contactInformation.office.email}
+            />
+            <BusinessCard
+              position={contactInformation.person1.position}
+              address={contactInformation.person1.name}
+              phone={contactInformation.person1.phone}
+              email={contactInformation.person1.email}
+            />
+            <BusinessCard
+              position={contactInformation.person2.position}
+              address={contactInformation.person2.name}
+              phone={contactInformation.person2.phone}
+              email={contactInformation.person2.email}
+            />
+
+
           </div>
 
         </section>

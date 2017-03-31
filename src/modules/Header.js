@@ -6,7 +6,11 @@ const styles = {
   header: {
     backgroundColor: '#EA6611',
     padding: 0,
+    paddingTop: 10,
     margin: 0,
+    display: 'flex',
+    flexFlow: 'row nowrap',
+    justifyContent: 'center'
   },
   font: {
     margin: 'auto',
@@ -14,10 +18,10 @@ const styles = {
   },
   img: {
     width: '100%',
+    maxWidth: 800,
     height: 'auto',
-    maxWidth: 1080,
     padding: 0,
-    margin: 0,
+    margin: 'auto',
   }
 }
 
