@@ -8,9 +8,6 @@ const styles = {
     padding: 0,
     paddingTop: 10,
     margin: 0,
-    display: 'flex',
-    flexFlow: 'row nowrap',
-    justifyContent: 'center'
   },
   font: {
     margin: 'auto',
@@ -22,6 +19,7 @@ const styles = {
     height: 'auto',
     padding: 0,
     margin: 'auto',
+    verticalAlign: 'bottom',
   }
 }
 
