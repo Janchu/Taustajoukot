@@ -11,10 +11,10 @@ const styles = {
     marginTop: 0,
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginBottom: -140,
+    marginBottom: -340,
   },
   pull: {
-    height: 140,
+    height: 340,
   }
 }
 
